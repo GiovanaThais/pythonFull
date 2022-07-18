@@ -6,7 +6,7 @@ class PessoaDal:
     @classmethod
     def salvar(cls, pessoa: Pessoa):
         with open('pessoas.txt', 'w') as arq:
-            arq.write(pessoa.nome +" "+str(pessoa.idade)+" "+ pessoa.cpf)
+            arq.write(pessoa.nome +" "+int(pessoa.idade)+" "+ int(pessoa.cpf))
     
     @classmethod
     def ler(cls):
@@ -18,4 +18,3 @@ class PessoaDal:
         cpf = "929222" 
         return Pessoa(nome, idade, cpf)
 
-p1 = Pessoa('Maria', 19, '23423211')
