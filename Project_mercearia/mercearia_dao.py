@@ -1,4 +1,4 @@
-from mercearia_model import Categoria, Estoque, Funcionario, Pessoa, Produto, Fornecedor, Venda
+from Project_mercearia.mercearia_model import Categoria, Estoque, Funcionario, Pessoa, Produto, Fornecedor, Venda
 
 
 class DaoCategoria:
@@ -119,5 +119,5 @@ class DaoVenda:
         vend = []
         for i in cls.vendas:
             vend.append(Venda(Produto(i[0], i[1], i[2], i[3], i[4], i[5])))
-        return vend
+        return  vend
 
