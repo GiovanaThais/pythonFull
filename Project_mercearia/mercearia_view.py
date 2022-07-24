@@ -81,6 +81,7 @@ if __name__ == "__main__":
         
         if menu == 6:
             vendas = mercearia_controller.ControllerVenda()
+            vendas.relatorioProdutos()
 
         if menu == 7:
             break
