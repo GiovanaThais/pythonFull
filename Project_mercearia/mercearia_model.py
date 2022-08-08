@@ -33,6 +33,14 @@ class Pessoa:
         self.email = email
         self.endereco = endereco
 
+# class Pessoa(Base):
+#         __tablename__ = 'Pessoa'
+#         id = Column(Integer, primary_key = True)
+#         nome = Column(String(50))
+        # usuario = Column(String(20))
+#         senha = Column(String(10))
+#         idCategoria = Column(Integer, ForeignKey('categoria.id))
+
 
 class Funcionario(Pessoa):
     def __init__(self, clt, nome, telefone, cpf, email, endereco):
