@@ -5,11 +5,11 @@ PORT = 8002
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-sock.bind(HOST, PORT)
+sock.bind((HOST, PORT))
 
 sock.listen(5)
 
 while True:
-    newSocket,_ = sock.accept()
-    message = newSocket.recv(1024)
-    newSocket.send(b'ok')
+    newSock, _ = sock.accept()
+    message = newSock.recv(1024).decode() #recebe mensagem em binario
+    newSock.send(b'ok')
