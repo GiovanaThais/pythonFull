@@ -1,6 +1,6 @@
 import requests
 
 
-retorna = requests.get('https://128.0.0.1:8000/user', "name": "joao")
+retorna = requests.post('https://128.0.0.1:8000/user', params={'id':4, 'name': 'Test', 'password': 'minhasenha1'})
 
-print(retorna.json()['message'])
+print(retorna.json())
